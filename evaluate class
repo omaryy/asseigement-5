@@ -1,6 +1,6 @@
 
 
-public class data5 {
+public class evaluate {
 
 public int evaluate (String expression )
 {
