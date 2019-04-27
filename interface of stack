@@ -1,0 +1,10 @@
+
+public interface IStack  {
+	public void pop();
+	public void peek();
+	public void push();
+	public boolean isempty();
+	public int size();
+	
+
+}
