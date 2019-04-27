@@ -1,0 +1,52 @@
+import java.util.Currency;
+
+public class Stack <T> {
+	ListNode <T> top;
+	int length=0;
+	private class ListNode <T>
+	{
+		T data;
+		ListNode<T> next;
+		public ListNode(T data) {
+			this.data=data;
+		}	
+	}
+	public int size ()
+	{
+		return length;
+	}
+	public void push (T data)
+	{
+	ListNode <T> temp =new ListNode <T>(data);	
+	if (top==null)	
+	{
+		top=  temp;
+	}
+	else {
+	temp.next=top;
+	top=temp;
+	}
+	length ++;
+	}
+	public T  peek ()
+	{
+		return top.data;
+	}
+	
+	public boolean isempty()
+	{
+		return length==0;
+	}
+	public T pop()
+	{
+		ListNode<T> temp=top;
+		
+		
+		top=temp.next;
+		temp.next=null;
+			
+		length--;
+		return temp.data;
+	}
+	
+}
